@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Dinlipi</string>
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">close</string>
+    <string name="title_activity_second">secondActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Dinlipi</string>
+    <string name="nav_header_subtitle">Memories are precious</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Unlock</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Go to</string>
+    <string name="menu_todo">To do</string>
+    <string name="menu_slideshow">Settings</string>
+    <string name="menu_info">Info</string>
+    <string name="send">Share</string>
+    <string name="home_second">Home Second</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="info">
+        Dinlipi is a personal Diary to keep your experiences, feelings and thoughts safe,
+        have a close look to your past with oneClick,
+        keep a track of your daily activities to do,\n\n
+        Thanks for using Dinlipi if you are using,
+        else it will be great if use it.
+    </string>
+    <string name="developer">Developer : SIB4U</string>
+    <string name="email">sib.sustswe@gmail.com</string>
+    <string name="follow">Follow on:</string>
+    <string name="menu_feedback">Feedback</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToDo">
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:id="@+id/l"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/edittextshape"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/addFieldID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/edittextshape"
+            android:inputType="textNoSuggestions"
+            android:ems="10" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_add" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/delete_icon" />
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentTop="true"
+        android:stackFromBottom="true"
+        android:id="@+id/todo"/>
+
+</RelativeLayout>
