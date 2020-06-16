@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private String p;
     private String s;
    private UserDetail userDetail;
+   Theme theme;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         editText1 = findViewById(R.id.usernameID);
         editText2 = findViewById(R.id.passwordID);
         button = findViewById(R.id.button);
-
         p = userDetail.load("passWordKey");
         if (p.isEmpty())
             button.setText("save");
