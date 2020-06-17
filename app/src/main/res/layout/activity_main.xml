@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor"
     android:gravity="center_horizontal"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:targetApi="lollipop">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,6 +37,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:textColor="?attr/white"
             android:text="@string/nav_header_title"
             android:fontFamily="monospace"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
@@ -42,6 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/white"
             android:text="@string/nav_header_subtitle"
             android:layout_gravity="center"
             android:gravity="center"/>
@@ -51,6 +55,7 @@
         android:layout_height="10dp"/>
 <LinearLayout
     android:layout_width="wrap_content"
+    android:background="?attr/BackgroundColor"
     android:layout_height="wrap_content"
     android:orientation="vertical">
     <EditText
@@ -64,8 +69,8 @@
             android:hint="User Name"
             android:inputType="textPassword"
             android:padding="5dp"
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="?attr/HomeText1"
+            android:textColorHint="?attr/HintTextColor"
             />
     <EditText
             android:id="@+id/passwordID"
@@ -78,8 +83,8 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="5dp"
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="?attr/HomeText1"
+            android:textColorHint="?attr/HintTextColor"
             />
     <Button
         android:background="@drawable/buttonshape"
@@ -87,7 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/colorWhite"
+        android:textColor="?attr/white"
         android:layout_marginTop="10dp"
         android:text="Open" />
 </LinearLayout>

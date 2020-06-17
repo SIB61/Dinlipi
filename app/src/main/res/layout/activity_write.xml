@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="?attr/OverlapBackgroundColor"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/fullPageID"
@@ -20,7 +20,7 @@
     android:layout_margin="10dp"
     android:gravity="bottom"
     android:id="@+id/appnameID"
-    android:textColor="@color/colorWhite"/>
+    android:textColor="?attr/white"/>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,13 +35,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginRight="3dp"
-        android:background="@color/colorWhite"
+        android:background="?attr/BackgroundColor"
         android:clickable="true"
         android:drawableStart="@drawable/date_icon"
         android:gravity="center|center_vertical"
-        android:hint="date"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="?attr/WriteText"
+        android:text="date"
         android:textSize="14dp" />
     <Space
         android:layout_width="0dp"
@@ -53,13 +52,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginHorizontal="25dp"
-        android:background="@color/colorWhite"
+        android:background="?attr/BackgroundColor"
         android:gravity="center"
         android:hint="title..."
         android:inputType="text|textMultiLine"
         android:maxLines="3"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="?attr/WriteText"
+        android:textColorHint="?attr/HintTextColor"
         android:textSize="25dp"
         android:textStyle="bold" />
 
@@ -77,13 +76,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="80dp"
-        android:background="@color/colorWhite"
+        android:background="?attr/BackgroundColor"
         android:textStyle="italic"
         android:gravity="top"
         android:hint="note..."
         android:inputType="textCapSentences|textMultiLine"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="?attr/WriteText"
+        android:textColorHint="?attr/HintTextColor"
         android:justificationMode="inter_word"
         android:textSize="18dp" />
 
@@ -99,8 +98,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginRight="16dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
+            android:background="?attr/OverlapBackgroundColor"
+            android:backgroundTint="?attr/OverlapBackgroundColor"
             android:src="@drawable/homeicon"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -109,12 +108,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginRight="1dp"
-            android:background="@color/colorPrimary"
-            android:backgroundTint="@color/colorPrimary"
+            android:background="?attr/OverlapBackgroundColor"
+            android:backgroundTint="?attr/OverlapBackgroundColor"
             android:src="@drawable/righticon" />
-
     </LinearLayout>
-
 </LinearLayout>
 </LinearLayout>
-

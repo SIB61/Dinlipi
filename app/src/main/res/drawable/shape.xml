@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle"
     android:thickness="0dp">
-    <solid android:color="@color/colorWhite" />
-    <stroke android:color="@color/colorPrimary"
+    <solid android:color="?attr/white" />
+    <stroke android:color="?attr/OverlapBackgroundColor"
         android:width="5dp"/>
     <corners android:topRightRadius="25dp"
            android:topLeftRadius="25dp"/>

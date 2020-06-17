@@ -70,6 +70,15 @@ public class UserDetail {
         else
             return new UserModel(" "," "," ",0);
     }
+   public  void  setDarkMode(Boolean b)
+   {
+       sharedPreferences.edit().putBoolean("dark",b).commit();
+   }
+   public Boolean isDarkMood(){
+
+            return sharedPreferences.getBoolean("dark",false);
+   }
+
 
 
 

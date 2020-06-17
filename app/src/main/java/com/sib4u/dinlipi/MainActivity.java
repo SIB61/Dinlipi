@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(new UserDetail(this).isDarkMood()==true)
+            setTheme(R.style.DarkTheme);
+        else
+            setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
         userDetail=new UserDetail(this);
         if(!userDetail.lockStatus())

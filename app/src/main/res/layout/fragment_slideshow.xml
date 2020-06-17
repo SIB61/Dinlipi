@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:background="?attr/BackgroundColor"
     android:layout_height="match_parent"
 
     tools:context=".ui.slideshow.SlideshowFragment">
@@ -26,8 +27,8 @@
                 android:hint="User Name"
                 android:inputType="textPassword"
                 android:padding="5dp"
-                android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorPrimary"/>
+                android:textColor="?attr/HomeText1"
+                android:textColorHint="?attr/HintTextColor"/>
         <EditText
             android:id="@+id/editText3"
             android:layout_width="match_parent"
@@ -39,8 +40,8 @@
             android:layout_marginTop="10dp"
             android:inputType="textPassword"
             android:padding="5dp"
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
+            android:textColor="?attr/HomeText1"
+            android:textColorHint="?attr/HintTextColor"
             />
 
             <EditText
@@ -54,8 +55,8 @@
                 android:hint="New Password"
                 android:inputType="textPassword"
                 android:padding="5dp"
-                android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorPrimary"
+                android:textColor="?attr/HomeText1"
+                android:textColorHint="?attr/HintTextColor"
                 />
         <Button
             android:layout_marginTop="10dp"
@@ -64,7 +65,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
             android:text="Save"
-            android:textColor="@color/colorWhite" />
+            android:textColor="?attr/white" />
         <Button
             android:id="@+id/cancel"
             android:layout_marginTop="10dp"
@@ -72,7 +73,24 @@
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
             android:text="Cancel"
-
-            android:textColor="@color/colorWhite" />
+            android:textColor="?attr/white" />
     </LinearLayout>
+
+
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="100dp"
+            android:checked="true"
+            android:textColor="?attr/HomeText1"
+            android:textSize="19dp"
+            android:drawableStart="@drawable/ic_dark"
+            android:text="Drak Mood"
+            android:textOff="Dark mood desabled"
+            android:textOn="Dark mode  enabled" />
+
+
 </LinearLayout>

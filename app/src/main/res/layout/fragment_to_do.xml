@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/BackgroundColor"
     tools:context=".ToDo">
     <LinearLayout
         android:layout_marginBottom="10dp"
@@ -25,6 +26,7 @@
             android:paddingVertical="5dp"
             android:background="@drawable/edittextshape"
             android:inputType="textNoSuggestions"
+            android:textColor="?attr/HomeText1"
             android:ems="10" />
         <ImageButton
             android:id="@+id/imageButton"
@@ -38,9 +40,9 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_marginRight="@dimen/fab_margin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/fab_margin"
             android:background="@android:color/transparent"
             android:src="@drawable/delete_icon" />
     </LinearLayout>

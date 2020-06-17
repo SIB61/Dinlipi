@@ -6,6 +6,7 @@
        android:id="@+id/checkboxTextID"
        android:layout_height="wrap_content"
        android:text="hello"
+       android:textColor="?attr/HomeText1"
        android:textSize="16dp"
        android:justificationMode="inter_word"
        android:checkMark="?android:attr/listChoiceIndicatorMultiple"

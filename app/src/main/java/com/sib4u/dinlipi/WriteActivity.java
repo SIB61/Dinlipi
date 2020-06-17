@@ -41,6 +41,10 @@ UserModel userModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(new UserDetail(this).isDarkMood()==true)
+            setTheme(R.style.DarkTheme);
+        else
+            setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_write);
         dateView=findViewById(R.id.dateID);
         NoteView=findViewById(R.id.noteViewID);

@@ -17,7 +17,6 @@
             android:screenOrientation="portrait"
             android:name=".secondActivity"
             android:label="@string/title_activity_second"
-            android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"

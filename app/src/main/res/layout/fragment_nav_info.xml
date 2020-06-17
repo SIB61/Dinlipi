@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="?attr/BackgroundColor"
     android:gravity="center_horizontal"
     tools:context=".NavInfoFragment">
     <!-- TODO: Update blank fragment layout -->
@@ -12,6 +12,7 @@
         android:id="@+id/info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="?attr/HintTextColor"
         android:layout_margin="10dp"
         android:text="@string/info"
         android:justificationMode="inter_word"
@@ -21,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/info"
-        android:background="@color/colorWhite"
+        android:background="?attr/BackgroundColor"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -30,17 +31,20 @@
             android:layout_height="wrap_content"
             android:text="@string/developer"
             android:textSize="25dp"
+            android:textColor="?attr/HomeText1"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/HomeText2"
             android:text="@string/email"
             android:textSize="18dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="?attr/HomeText2"
             android:layout_marginTop="5dp"
             android:text="@string/follow" />
 
@@ -48,26 +52,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:background="?attr/BackgroundColor"
             android:gravity="center"
             android:paddingBottom="10dp">
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/linkedin_foreground" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/github" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/linkedin_round" />
-
+                android:src="@mipmap/github"/>
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/insta_round" />
+                app:srcCompat="@mipmap/insta_foreground" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
