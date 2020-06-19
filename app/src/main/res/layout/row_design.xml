@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
-       android:gravity="center"
-       android:layout_width="match_parent"
-       android:layout_toRightOf="@+id/pos"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_height="wrap_content"
+   android:layout_width="match_parent"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="7dp"
+    android:layout_marginVertical="7dp"
+    android:background="@drawable/buttonshape"
+    android:paddingVertical="5dp"
+    android:orientation="vertical">
+   <CheckedTextView
        android:id="@+id/checkboxTextID"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="hello"
-       android:textColor="?attr/HomeText1"
-       android:textSize="16dp"
-       android:justificationMode="inter_word"
+       android:layout_toRightOf="@+id/pos"
        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+       android:checked="false"
+       android:justificationMode="inter_word"
        android:paddingVertical="3dp"
        android:paddingLeft="7dp"
-       android:checked="false">
-   </CheckedTextView>
+       android:text="hello"
+       android:textColor="?attr/white"
+       android:textSize="20dp" />
+   <TextView
+       android:layout_width="wrap_content"
+       android:id="@+id/timeID"
+       android:drawableStart="@drawable/ic_alarm"
+       android:layout_height="wrap_content"
+       android:textColor="?attr/white"
+       android:text="Date"
+       android:layout_gravity="center_horizontal"/>
+</LinearLayout>
+</LinearLayout>

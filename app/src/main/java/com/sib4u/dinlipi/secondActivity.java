@@ -17,6 +17,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 
+import static android.content.Intent.EXTRA_SUBJECT;
+
 public class secondActivity extends AppCompatActivity {
 
     DrawerLayout drawer;
@@ -73,12 +75,14 @@ public class secondActivity extends AppCompatActivity {
             case R.id.sendID:
                 Intent send = new Intent(Intent.ACTION_SEND);
                 send.setType("text/plain");
-                String subject = "Dinlipi";
-                String body = "https://github.com/SIB61/Dinlipi/releases/tag/1.0";
-                send.putExtra(Intent.EXTRA_SUBJECT, subject);
+                String subject = "Dinlipi - A personal lock diary";
+                String body = "https://github.com/SIB61/Dinlipi/releases";
+                send.putExtra(EXTRA_SUBJECT, subject);
                 send.putExtra(Intent.EXTRA_TEXT, body);
                 startActivity(Intent.createChooser(send, "share using"));
                 break;
+            default:
+
         }
         return super.onOptionsItemSelected(item);
     }

@@ -1,11 +1,13 @@
 package com.sib4u.dinlipi;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckedTextView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -38,8 +40,10 @@ public class TodoAdapter extends BaseAdapter {
         LayoutInflater layoutInflater= (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView=layoutInflater.inflate(R.layout.row_design,null);
         CheckedTextView checkedTextView=convertView.findViewById(R.id.checkboxTextID);
-        checkedTextView.setText("-> "+userModelList.get(position).getTODO());
+        checkedTextView.setText(userModelList.get(position).getTODO());
         checkedTextView.setChecked(userModelList.get(position).isChecked()==1);
+        TextView textView=convertView.findViewById(R.id.timeID);
+        textView.setText(userModelList.get(position).getTIME());
         return convertView;
     }
 }

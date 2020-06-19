@@ -10,6 +10,17 @@ public class UserDetail {
         this.ctx = ctx;
        sharedPreferences=ctx.getSharedPreferences("userDetail",Context.MODE_PRIVATE);
     }
+    public void setReminder(boolean b)
+    {
+        sharedPreferences.edit().putBoolean("reminder",b).commit();
+    }
+    public Boolean getReminder(){
+          return sharedPreferences.getBoolean("reminder",true);
+    }
+
+
+
+
 
     public void  save( String username , String password)
     {

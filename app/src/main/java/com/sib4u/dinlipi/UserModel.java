@@ -8,10 +8,20 @@ public class UserModel {
     private int ID2;
     private String TODO;
     int isChecked;
-    public UserModel(int ID2,String TODO,int isChecked) {
+    private  String TIME;
+    public UserModel(int ID2,String TODO,int isChecked,String TIME) {
         this.TODO = TODO;
         this.ID2=ID2;
         this.isChecked=isChecked;
+        this.TIME=TIME;
+    }
+
+    public String getTIME() {
+        return TIME;
+    }
+
+    public void setTIME(String TIME) {
+        this.TIME = TIME;
     }
 
     public int isChecked() {

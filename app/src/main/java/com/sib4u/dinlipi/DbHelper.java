@@ -24,6 +24,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final String TODO = "TODO";
     private static final String CHECK= "CHECka";
+    private static final String TIME= "TIME";
 
     private final String GET_ALL=" SELECT * FROM "+TABLE_NAME;
     private final String GET2_ALL=" SELECT * FROM "+TABLE2_NAME;
@@ -34,7 +35,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_TABLE_SQL= " CREATE TABLE " + TABLE_NAME + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + DATE + " TEXT, " + TITLE + " TEXT, " + NOTE + " TEXT)";
-        String CREATE_TABLE2_SQL= " CREATE TABLE " + TABLE2_NAME + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TODO + " TEXT, " + CHECK + " INTEGER)";
+        String CREATE_TABLE2_SQL= " CREATE TABLE " + TABLE2_NAME + "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + TODO + " TEXT, " + CHECK + " INTEGER, " + TIME + " TEXT)";
         db.execSQL(CREATE_TABLE_SQL);
         db.execSQL(CREATE_TABLE2_SQL);
     }
@@ -62,6 +63,7 @@ public class DbHelper extends SQLiteOpenHelper {
         ContentValues cv=new ContentValues();
         cv.put(TODO,userModel.getTODO());
         cv.put(CHECK,userModel.isChecked());
+        cv.put(TIME,userModel.getTIME());
         long added= db.insert(TABLE2_NAME,null,cv);
         db.close();
         return added==-1 ?false:true;
@@ -140,10 +142,10 @@ public class DbHelper extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery(GET2_ALL,null);
         if(cursor.moveToPosition(position))
         {
-            userModel=new UserModel(cursor.getInt(0),cursor.getString(1),cursor.getInt(2));
+            userModel=new UserModel(cursor.getInt(0),cursor.getString(1),cursor.getInt(2),cursor.getString(3));
         }
         else {
-            userModel = new UserModel(-1, "empty",0);
+            userModel = new UserModel(-1, "empty",0,"empty");
         }
         return userModel;
     }
@@ -166,6 +168,7 @@ public class DbHelper extends SQLiteOpenHelper {
         ContentValues cv=new ContentValues();
         cv.put(CHECK,userModel.isChecked());
         cv.put(TODO,userModel.getTODO());
+        cv.put(TIME,userModel.getTIME());
         String id=userModel.getID2()+"";
         int in=db.update(TABLE2_NAME,cv,"ID = ?",new String[]{id});
         db.close();
@@ -186,21 +189,18 @@ public class DbHelper extends SQLiteOpenHelper {
         SQLiteDatabase db=getReadableDatabase();
         Cursor cursor=db.rawQuery(GET2_ALL,null);
         if(cursor.moveToFirst()){
-            int cID=cursor.getInt(0);
-            String cTodo=cursor.getString(1);
-            int cCheck=cursor.getInt(2);
-            returnList.add(new UserModel(cID,cTodo,cCheck));
+            returnList.add(new UserModel(cursor.getInt(0),
+                    cursor.getString(1),cursor.getInt(2),cursor.getString(3)));
             while (cursor.moveToNext())
             {
-                 cID=cursor.getInt(0);
-                 cTodo=cursor.getString(1);
-                 cCheck=cursor.getInt(2);
-                returnList.add(new UserModel(cID,cTodo,cCheck));
+                returnList.add(new UserModel(cursor.getInt(0),
+                        cursor.getString(1),cursor.getInt(2),cursor.getString(3)));
             }
         }
         db.close();
         return returnList;
     }
+
 
     public boolean deleteTodo()
     {

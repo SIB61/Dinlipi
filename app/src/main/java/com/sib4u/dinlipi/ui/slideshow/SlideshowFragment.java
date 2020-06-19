@@ -13,16 +13,16 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import com.sib4u.dinlipi.R;
 import com.sib4u.dinlipi.UserDetail;
 
 public class SlideshowFragment extends Fragment {
-    Switch aSwitch;
     private Button saveButton, cancel;
     private EditText userName, oldPass, newPass;
+    private Switch aSwitch, bSwitch;
+    private UserDetail userDetail;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,15 +31,20 @@ public class SlideshowFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-
-        }
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        userDetail = new UserDetail(getContext());
         aSwitch = root.findViewById(R.id.switch1);
         oldPass = root.findViewById(R.id.editText3);
         newPass = root.findViewById(R.id.editText4);
         userName = root.findViewById(R.id.editText2);
         saveButton = root.findViewById(R.id.button2);
+        bSwitch = root.findViewById(R.id.switch2);
+        cancel = root.findViewById(R.id.cancel);
+
+        aSwitch.setChecked(userDetail.isDarkMood());
+        bSwitch.setChecked(userDetail.getReminder());
+
+
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +69,7 @@ public class SlideshowFragment extends Fragment {
                     Toast.makeText(getContext(), "wrong password", Toast.LENGTH_SHORT).show();
             }
         });
-        cancel = root.findViewById(R.id.cancel);
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,21 +79,19 @@ public class SlideshowFragment extends Fragment {
                 getActivity().onBackPressed();
             }
         });
-        if (new UserDetail(getContext()).isDarkMood()) {
-            aSwitch.setChecked(true);
-        } else {
-            aSwitch.setChecked(false);
-        }
+
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    new UserDetail(getContext()).setDarkMode(true);
-                    reset();
-                } else {
-                    new UserDetail(getContext()).setDarkMode(false);
-                    reset();
-                }
+                userDetail.setDarkMode(isChecked);
+                reset();
+            }
+        });
+
+        bSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                userDetail.setReminder(isChecked);
             }
         });
         return root;

@@ -3,16 +3,16 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorDodgerBlue</item>
-        <item name="colorPrimaryDark">#7BA4C5</item>
-        <item name="colorAccent">@color/colorDeepSkyBlue</item>
+        <item name="colorPrimary">#6200EA</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorDodgerBlue</item>
         <item name="BackgroundColor">@color/colorWhite</item>
-        <item name="OverlapBackgroundColor">#2196F3</item>
-        <item name="WriteText">@color/colorDodgerBlue</item>
+        <item name="OverlapBackgroundColor">#6200EA</item>
+        <item name="WriteText">#6200EA</item>
         <item name="HomeText1">@color/colorBlack</item>
         <item name="HomeText2">#38393A</item>
         <item name="HintTextColor">#BBC2C8</item>
-        <item name="IconColor1">@color/colorDeepSkyBlue</item>
+        <item name="IconColor1">#6200EA</item>
         <item name="IconColor2">#404147</item>
         <item name="white">#FFF</item>
         <item name="android:windowAnimationStyle">
@@ -22,7 +22,7 @@
     <style name="DarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorBlack</item>
         <item name="colorPrimaryDark">#757478</item>
-        <item name="colorAccent">#404147</item>
+        <item name="colorAccent">#323030</item>
         <item name="BackgroundColor">@color/colorBlack</item>
         <item name="OverlapBackgroundColor">#404147</item>
         <item name="WriteText">@color/colorWhite</item>
