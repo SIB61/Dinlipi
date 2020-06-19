@@ -155,7 +155,6 @@ public class ToDo extends Fragment {
         PendingIntent pendingIntent =PendingIntent.getBroadcast(getContext(),i,intent,0);
         alarmManager.cancel(pendingIntent);
     }
-
     private void showTimePicker() {
         calendar=Calendar.getInstance();
         TimePickerDialog timePickerDialog=new TimePickerDialog(getContext(),

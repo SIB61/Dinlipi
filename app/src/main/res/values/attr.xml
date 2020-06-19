@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="dt">
+        <attr name="BackgroundColor" format="color"/>
+        <attr name="OverlapBackgroundColor" format="color"/>
+        <attr name="WriteText" format="color"/>
+        <attr name="HomeText1" format="color"/>
+        <attr name="HomeText2" format="color"/>
+        <attr name="bck" format="integer"/>
+        <attr name="CalenderColor" format="color"/>
+        <attr name="HintTextColor" format="color"/>
+        <attr name="IconColor1" format="color"/>
+        <attr name="IconColor2" format="color"/>
+        <attr name="white" format="color"/>
+    </declare-styleable>
+</resources>
+
+
+
+
