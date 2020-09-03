@@ -1,7 +1,7 @@
 # Dinlipi
 Diary with ToDo app in android Studio with java ;
 
-#Topics to Learn Here:
+# Topics to Learn Here:
 
 - How to implement Drawer Navigation
 - ListView With Custom Adapter 
@@ -12,4 +12,4 @@ Diary with ToDo app in android Studio with java ;
 - How to lock and unlock your app with sharedpreferences 
 - Passing Data through activities 
 
-https://github.com/SIB61/Dinlipi/blob/master/FB_IMG_1598581903177.jpg
+![](FB_IMG_1598581903177.jpg)
